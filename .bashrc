@@ -25,3 +25,7 @@ function promps {
     PS1="${TITLEBAR}${GREEN}${BASE}${WHITE}:${BLUE}\W${RED}\$(parse_git_branch)${BLUE}\$${WHITE} "
 }
 promps
+# git補完機能、別途インストールが必要
+source ~/.git-completion.bash
+
+alias debitstar='docker exec -it bitstar_web_1 /bin/bash'
