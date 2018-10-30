@@ -117,7 +117,7 @@ set incsearch
 set t_Co=256
 set ttyfast
 set lazyredraw
-set cursorline
+" set nocursorline
 set clipboard=unnamed,autoselect
 syntax on
 colorscheme pablo
@@ -125,11 +125,11 @@ colorscheme pablo
 """"""""""""""""""""""""""""""""""
 " 手を離した時だけcursorline有効
 """"""""""""""""""""""""""""""""""
-" augroup vimrc-auto-cursorline
-"   autocmd!
-"   autocmd CursorMoved,CursorMovedI,WinLeave * setlocal nocursorline
-"   autocmd CursorHold,CursorHoldI * setlocal cursorline
-" augroup END
+augroup vimrc-auto-cursorline
+  autocmd!
+  autocmd CursorMoved,CursorMovedI,WinLeave * setlocal nocursorline
+  autocmd CursorHold,CursorHoldI * setlocal cursorline
+augroup END
 
 " http://blog.remora.cx/2010/12/vim-ref-with-unite.html
 """"""""""""""""""""""""""""""
