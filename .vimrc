@@ -11,16 +11,9 @@ Plug 'Shougo/neomru.vim'
 
 " ファイルをtree表示してくれる
 Plug 'scrooloose/nerdtree'
+
 " 別タブを開いた時もNERTreeを維持
 Plug 'jistr/vim-nerdtree-tabs'
-" NERDTreeで隠しファイルを表示
-let NERDTreeShowHidden = 1
-" ファイルが指定されていなければツリーも表示させる
-if argc() == 0
-  let g:nerdtree_tabs_open_on_console_startup=1
-end
-" 他のバッファを全て閉じた時にNERDTreeが開いてたら一緒に閉じる
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Ruby向けにendを自動挿入してくれる
 Plug 'tpope/vim-endwise'
@@ -62,6 +55,7 @@ Plug 'slim-template/vim-slim'
 " vimカラースキーム
 " Plug 'cocopon/iceberg.vim'
 Plug 'sts10/vim-pink-moon'
+Plug 'Jimeno0/vim-chito'
 
 call plug#end()
 
@@ -155,6 +149,18 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vspli
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 """"""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
+" NERDTree設定
+""""""""""""""""""""""""""""""
+" NERDTreeで隠しファイルを表示
+let NERDTreeShowHidden = 1
+" ファイルが指定されていなければツリーも表示させる
+if argc() == 0
+  let g:nerdtree_tabs_open_on_console_startup=1
+end
+" 他のバッファを全て閉じた時にNERDTreeが開いてたら一緒に閉じる
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " filetypeの自動検出
 filetype on
