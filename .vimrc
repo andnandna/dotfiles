@@ -61,7 +61,7 @@ Plug 'slim-template/vim-slim'
 
 " vimカラースキーム
 " Plug 'cocopon/iceberg.vim'
-" Plug 'vim-scripts/twilight'
+Plug 'sts10/vim-pink-moon'
 
 call plug#end()
 
@@ -120,7 +120,7 @@ set lazyredraw
 set cursorline
 set clipboard=unnamed,autoselect
 syntax on
-colorscheme pablo
+colorscheme orange-moon
 
 """"""""""""""""""""""""""""""""""
 " 手を離した時だけcursorline有効
