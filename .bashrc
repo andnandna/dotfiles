@@ -29,3 +29,5 @@ promps
 source ~/.git-completion.bash
 
 alias debitstar='docker exec -it bitstar_web_1 /bin/bash'
+# 実践vim用、サンプルコードフォルダ直下でのみ
+alias rawvim='vim -u essential.vim'
