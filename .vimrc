@@ -54,6 +54,11 @@ Plug 'slim-template/vim-slim'
 
 " vimカラースキーム
 Plug 'cocopon/iceberg.vim'
+Plug 'davidklsn/vim-sialoquent'
+Plug 'AlessandroYorba/Despacio'
+Plug 'deathlyfrantic/vim-distill'
+Plug 'scwood/vim-hybrid'
+Plug 'atelierbram/vim-colors_duotones'
 
 call plug#end()
 
@@ -100,13 +105,13 @@ set laststatus=2
 set cmdheight=2
 set scrolloff=4
 set list
-set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
+set listchars=tab:>.,trail:_,extends:>,precedes:<,nbsp:%
 set wildmenu
 set wildmode=list:longest,full
 set noswapfile
 set background=dark
 set incsearch
-set t_Co=256
+set termguicolors
 set ttyfast
 set lazyredraw
 set cursorline
