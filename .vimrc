@@ -15,6 +15,9 @@ Plug 'scrooloose/nerdtree'
 " 別タブを開いた時もNERTreeを維持
 Plug 'jistr/vim-nerdtree-tabs'
 
+" NERDTreeにGitの変更情報を表示
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 " Ruby向けにendを自動挿入してくれる
 Plug 'tpope/vim-endwise'
 
@@ -59,6 +62,7 @@ Plug 'AlessandroYorba/Despacio'
 Plug 'deathlyfrantic/vim-distill'
 Plug 'scwood/vim-hybrid'
 Plug 'atelierbram/vim-colors_duotones'
+Plug 'gilgigilgil/anderson.vim'
 
 call plug#end()
 
