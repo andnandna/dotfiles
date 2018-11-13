@@ -121,7 +121,7 @@ set lazyredraw
 set cursorline
 set clipboard=unnamed,autoselect
 syntax on
-colorscheme iceberg
+colorscheme despacio
 
 """"""""""""""""""""""""""""""""""
 " 手を離した時だけcursorline有効

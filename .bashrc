@@ -15,6 +15,9 @@ function promps {
     local  RED="\[\e[1;31m\]"
     local  GREEN="\[\e[1;32m\]"
     local  WHITE="\[\e[00m\]"
+    local  CYAN="\[\e[1;36m\]"
+    local  PURPLE="\[\e[1;35m\]"
+    local  YELLOW="\[\e[1;33m\]"
     local  GRAY="\[\e[1;37m\]"
 
     case $TERM in
@@ -22,7 +25,7 @@ function promps {
         *)      TITLEBAR="";;
     esac
     local BASE="\u@\h"
-    PS1="${TITLEBAR}${GRAY}${BASE}${WHITE}:${BLUE}\W${RED}\$(parse_git_branch)${BLUE}\$${WHITE} "
+    PS1="${TITLEBAR}${GLAY}${BASE}${WHITE}:${CYAN}\W${RED}\$(parse_git_branch)${BLUE}\$${WHITE} "
 }
 promps
 # git補完機能、別途インストールが必要
