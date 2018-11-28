@@ -15,6 +15,9 @@ Plug 'scrooloose/nerdtree'
 " 別タブを開いた時もNERTreeを維持
 Plug 'jistr/vim-nerdtree-tabs'
 
+" NERDTreeにGitの変更情報を表示
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 " Ruby向けにendを自動挿入してくれる
 Plug 'tpope/vim-endwise'
 
@@ -32,6 +35,9 @@ Plug 'simeji/winresizer'
 
 " コメントON/OFFを手軽に実行
 Plug 'tomtom/tcomment_vim'
+
+" csv見る
+Plug 'mechatroner/rainbow_csv'
 
 " インデントに色を付けて見やすくする
 Plug 'nathanaelkane/vim-indent-guides'
@@ -52,6 +58,11 @@ Plug 'mattn/emmet-vim'
 " Slimのシンタックスハイライト
 Plug 'slim-template/vim-slim'
 
+" Lineに詳細情報表示とテーマ
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme = 'raven'
+
 " vimカラースキーム
 Plug 'cocopon/iceberg.vim'
 Plug 'davidklsn/vim-sialoquent'
@@ -59,6 +70,8 @@ Plug 'AlessandroYorba/Despacio'
 Plug 'deathlyfrantic/vim-distill'
 Plug 'scwood/vim-hybrid'
 Plug 'atelierbram/vim-colors_duotones'
+Plug 'gilgigilgil/anderson.vim'
+Plug 'tjammer/blayu.vim'
 
 call plug#end()
 
@@ -117,7 +130,7 @@ set lazyredraw
 set cursorline
 set clipboard=unnamed,autoselect
 syntax on
-colorscheme iceberg
+colorscheme blayu
 
 """"""""""""""""""""""""""""""""""
 " 手を離した時だけcursorline有効
