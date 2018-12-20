@@ -72,6 +72,8 @@ Plug 'scwood/vim-hybrid'
 Plug 'atelierbram/vim-colors_duotones'
 Plug 'gilgigilgil/anderson.vim'
 Plug 'tjammer/blayu.vim'
+Plug 'nightsense/snow'
+Plug 'phanviet/Sidonia'
 
 call plug#end()
 
@@ -133,7 +135,7 @@ set lazyredraw
 set cursorline
 set clipboard=unnamed,autoselect
 syntax on
-colorscheme iceberg
+colorscheme duotone-darkspace
 
 """"""""""""""""""""""""""""""""""
 " 手を離した時だけcursorline有効
