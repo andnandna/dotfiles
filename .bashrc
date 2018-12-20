@@ -26,7 +26,7 @@ function promps {
     esac
     local BASE="\u@\h"
     # PS1="${TITLEBAR}${GLAY}${BASE}${WHITE}:${CYAN}\W${RED}\$(parse_git_branch)${BLUE}\$${WHITE} "
-    PS1="${GLAY}\u[\t]${WHITE}:${CYAN}\W${RED}\$(parse_git_branch)${BLUE}\n\$${WHITE} "
+    PS1="${GREEN}\u[\t]${WHITE}:${CYAN}\W${RED}\$(parse_git_branch)${BLUE}\n\$${WHITE} "
 }
 promps
 # git補完機能、別途インストールが必要
