@@ -25,7 +25,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 
 " Rubyのローカル変数をハイライトする
-Plug 'todesking/ruby_hl_lvar.vim'
+" Plug 'todesking/ruby_hl_lvar.vim'
 
 " vim上でGitコマンドを使用できる
 Plug 'tpope/vim-fugitive'
@@ -105,6 +105,9 @@ nnoremap sw <C-w>w
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sn gt
 nnoremap sp gT
+
+" vim上でpythonファイル実行
+autocmd BufNewFile,BufRead *.py nnoremap <C-i> :!python %
 
 """"""""""""""""""""""""""""""
 " 各種オプション
