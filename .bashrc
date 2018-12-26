@@ -5,39 +5,45 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-# User specific aliases and functions
-function parse_git_branch {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
-}
-function promps {
-    # 色は気分で変えたいかもしれないので変す宣言しておく
-    local  BLUE="\[\e[1;34m\]"
-    local  RED="\[\e[1;31m\]"
-    local  GREEN="\[\e[1;32m\]"
-    local  WHITE="\[\e[00m\]"
-    local  CYAN="\[\e[1;36m\]"
-    local  PURPLE="\[\e[1;35m\]"
-    local  YELLOW="\[\e[1;33m\]"
-    local  GRAY="\[\e[1;37m\]"
-
-    case $TERM in
-        xterm*) TITLEBAR='\[\e]0;\W\007\]';;
-        *)      TITLEBAR="";;
-    esac
-    local BASE="\u@\h"
-    # PS1="${TITLEBAR}${GLAY}${BASE}${WHITE}:${CYAN}\W${RED}\$(parse_git_branch)${BLUE}\$${WHITE} "
-    PS1="${GREEN}\u[\t]${WHITE}:${CYAN}\W${RED}\$(parse_git_branch)${BLUE}\n\$${WHITE} "
-}
-promps
 # git補完機能、別途インストールが必要
 source ~/.git-completion.bash
 
-alias debitstar='docker exec -it bitstar_web_1 /bin/bash'
-# 実践vim用、サンプルコードフォルダ直下でのみ
-alias rawvim='vim -u essential.vim'
-# 会社localPC Elastic起動
-alias startes='/usr/local/Cellar/elasticsearch/6.4.3/bin/elasticsearch'
+# git branch表示
+# https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+source ~/.git-prompt.sh
 
+# Gitブランチの状況を*+%で表示
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUPSTREAM=auto
+
+# プロンプト色、色早見
+# 30m : Black
+# 31m : Red
+# 32m : Green
+# 33m : Yellow
+# 34m : Blue
+# 35m : Purple
+# 36m : Cyan
+# 37m : Gray
+# 4x  : Background
+# 1   : Bold
+
+# 出力の後に改行
+function add_line {
+  if [[ -z "${PS1_NEWLINE_LOGIN}" ]]; then
+    PS1_NEWLINE_LOGIN = true
+  else
+    printf '\n'
+  fi
+}
+
+PROMPT_COMMAND='add_line'
+
+export PS1='\[\e[30;44m\] \u[\t] \[\e[0;34;46m\] \[\e[30;46m\]\W\[\e[1;32m $(__git_ps1 "\[\e[0;36;42m\] \[\e[30m\] %s \[\e[0;32m\]") \[\e[0m\]\n\$ '
+
+# Hyper用タブにアイコン表示
 case "$TERM" in
 xterm*|rxvt*)
     PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
@@ -56,3 +62,11 @@ xterm*|rxvt*)
 *)
     ;;
 esac
+
+# エイリアス
+# 会社docker環境
+alias debitstar='docker exec -it bitstar_web_1 /bin/bash'
+# 実践vim用、サンプルコードフォルダ直下でのみ
+alias rawvim='vim -u essential.vim'
+# 会社localPC Elastic起動
+alias startes='/usr/local/Cellar/elasticsearch/6.4.3/bin/elasticsearch'
