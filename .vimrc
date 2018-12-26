@@ -135,7 +135,7 @@ set lazyredraw
 set cursorline
 set clipboard=unnamed,autoselect
 syntax on
-colorscheme duotone-darkspace
+colorscheme snow
 
 """"""""""""""""""""""""""""""""""
 " 手を離した時だけcursorline有効
