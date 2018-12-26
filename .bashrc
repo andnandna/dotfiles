@@ -30,19 +30,8 @@ GIT_PS1_SHOWUPSTREAM=auto
 # 4x  : Background
 # 1   : Bold
 
-# 出力の後に改行
-function add_line {
-  if [[ -z "${PS1_NEWLINE_LOGIN}" ]]; then
-    PS1_NEWLINE_LOGIN = true
-  else
-    printf '\n'
-  fi
-}
-
-PROMPT_COMMAND='add_line'
-
 # 出力プロンプト
-export PS1='\[\e[30;44m\]\u[\t] \[\e[0;34;46m\] \[\e[30;46m\]\W\[\e[1;32m \[\e[0;36;42m\]$(__git_ps1 " \[\e[30m\] %s ")\[\e[0;32m\]\[\e[0;39;49m\] \n\$ '
+export PS1='\n\[\e[30;44m\]\u[\t] \[\e[0;34;46m\] \[\e[30;46m\]\W\[\e[1;32m \[\e[0;36;42m\]$(__git_ps1 " \[\e[30m\] %s ")\[\e[0;32m\]\[\e[0;39;49m\] \n\$ '
 
 # Hyper用タブにアイコン表示
 case "$TERM" in
