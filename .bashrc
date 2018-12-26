@@ -42,7 +42,7 @@ function add_line {
 PROMPT_COMMAND='add_line'
 
 # 出力プロンプト
-export PS1='\[\e[30;44m\]\u[\t] \[\e[0;34;46m\] \[\e[30;46m\]\W\[\e[1;32m $(__git_ps1 "\[\e[0;36;42m\] \[\e[30m\] %s \[\e[0;32m\]") \[\e[0m\]\n\$ '
+export PS1='\[\e[30;44m\]\u[\t] \[\e[0;34;46m\] \[\e[30;46m\]\W\[\e[1;32m \[\e[0;36;42m\]$(__git_ps1 " \[\e[30m\] %s ")\[\e[0;32m\]\[\e[0;39;49m\] \n\$ '
 
 # Hyper用タブにアイコン表示
 case "$TERM" in
