@@ -108,6 +108,8 @@ nnoremap sw <C-w>w
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sn gt
 nnoremap sp gT
+" コメントアウト
+nnoremap <Space><Space> :TComment<CR>
 
 " vim上でpythonファイル実行
 autocmd BufNewFile,BufRead *.py nnoremap <C-i> :!python %
