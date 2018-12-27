@@ -25,7 +25,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 
 " Rubyのローカル変数をハイライトする
-" Plug 'todesking/ruby_hl_lvar.vim'
+Plug 'todesking/ruby_hl_lvar.vim'
 
 " vim上でGitコマンドを使用できる
 Plug 'tpope/vim-fugitive'
@@ -66,6 +66,9 @@ let g:airline_theme = 'raven'
 " jとkの移動を高速化
 Plug 'rhysd/accelerated-jk'
 
+" カッコ対応付け拡張
+Plug 'andymass/vim-matchup'
+
 " vimカラースキーム
 Plug 'cocopon/iceberg.vim'
 Plug 'davidklsn/vim-sialoquent'
@@ -96,6 +99,8 @@ noremap <Space>h  ^
 noremap <Space>l  $
 noremap <C-f> <esc>
 noremap! <C-f> <esc>
+" カッコ対応付け(%)用
+map <Space>m  %
 " NERDTreeを開く
 nnoremap <silent><C-l> :NERDTreeFocusToggle<CR>
 " 画面分割系移動
@@ -104,6 +109,7 @@ nnoremap sk <C-w>k
 nnoremap sh <C-w>h
 nnoremap sl <C-w>l
 nnoremap sw <C-w>w
+nnoremap sc <C-w>x
 " タブ系移動
 nnoremap st :<C-u>tabnew<CR>
 nnoremap sn gt
