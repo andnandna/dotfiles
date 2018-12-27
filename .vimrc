@@ -63,6 +63,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme = 'raven'
 
+" jとkの移動を高速化
+Plug 'rhysd/accelerated-jk'
+
 " vimカラースキーム
 Plug 'cocopon/iceberg.vim'
 Plug 'davidklsn/vim-sialoquent'
