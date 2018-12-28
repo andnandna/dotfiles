@@ -52,9 +52,6 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgr
 " 行末の半角スペースを可視化
 Plug 'bronson/vim-trailing-whitespace'
 
-" HTMLコード簡易生成
-Plug 'mattn/emmet-vim'
-
 " Slimのシンタックスハイライト
 Plug 'slim-template/vim-slim'
 
@@ -80,6 +77,7 @@ Plug 'gilgigilgil/anderson.vim'
 Plug 'tjammer/blayu.vim'
 Plug 'nightsense/snow'
 Plug 'phanviet/Sidonia'
+Plug 'Nequo/vim-allomancer'
 
 call plug#end()
 
@@ -146,7 +144,7 @@ set lazyredraw
 set cursorline
 set clipboard=unnamed,autoselect
 syntax on
-colorscheme duotone-darkcave
+colorscheme allomancer
 
 """"""""""""""""""""""""""""""""""
 " 手を離した時だけcursorline有効
@@ -158,6 +156,7 @@ colorscheme duotone-darkcave
 " augroup END
 
 " http://blog.remora.cx/2010/12/vim-ref-with-unite.html
+
 """"""""""""""""""""""""""""""
 " Unite.vimの設定
 """"""""""""""""""""""""""""""
