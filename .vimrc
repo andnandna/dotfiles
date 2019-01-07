@@ -3,27 +3,25 @@
 """"""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
+"""" Unite.vim
 " ファイルオープン
 Plug 'Shougo/unite.vim'
-
 " Unite.vimで最近使ったファイルを表示できる
 Plug 'Shougo/neomru.vim'
 
+"""" NERDTree
 " ファイルをtree表示してくれる
 Plug 'scrooloose/nerdtree'
-
 " 別タブを開いた時もNERTreeを維持
 Plug 'jistr/vim-nerdtree-tabs'
-
 " NERDTreeにGitの変更情報を表示
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+"""" Ruby / Rails
 " Ruby向けにendを自動挿入してくれる
 Plug 'tpope/vim-endwise'
-
 " Rails開発用
 Plug 'tpope/vim-rails'
-
 " Rubyのローカル変数をハイライトする
 Plug 'todesking/ruby_hl_lvar.vim'
 
@@ -41,13 +39,6 @@ Plug 'mechatroner/rainbow_csv'
 
 " インデントに色を付けて見やすくする
 Plug 'nathanaelkane/vim-indent-guides'
-let g:indent_guides_enable_on_vim_startup = 1
-" NERDTreeでは無効化
-let g:indent_guides_exclude_filetypes = ['nerdtree']
-" 色設定
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#2e3436 ctermbg=black
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
 
 " 行末の半角スペースを可視化
 Plug 'bronson/vim-trailing-whitespace'
@@ -158,7 +149,7 @@ colorscheme allomancer
 " http://blog.remora.cx/2010/12/vim-ref-with-unite.html
 
 """"""""""""""""""""""""""""""
-" Unite.vimの設定
+" Unite.vim設定
 """"""""""""""""""""""""""""""
 " 入力モードで開始する
 let g:unite_enable_start_insert=1
@@ -193,5 +184,19 @@ end
 " 他のバッファを全て閉じた時にNERDTreeが開いてたら一緒に閉じる
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+""""""""""""""""""""""""""""""
+" indent guideline設定
+""""""""""""""""""""""""""""""
+let g:indent_guides_enable_on_vim_startup = 1
+" NERDTreeでは無効化
+let g:indent_guides_exclude_filetypes = ['nerdtree']
+" 色設定
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#2e3436 ctermbg=black
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
+
+""""""""""""""""""""""""""""""
+" 他
+""""""""""""""""""""""""""""""
 " filetypeの自動検出
 filetype on
