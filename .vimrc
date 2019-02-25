@@ -69,6 +69,8 @@ Plug 'tjammer/blayu.vim'
 Plug 'nightsense/snow'
 Plug 'phanviet/Sidonia'
 Plug 'Nequo/vim-allomancer'
+Plug 'nightsense/cosmic_latte'
+Plug 'bellma101/vim-snazzy'
 
 call plug#end()
 
@@ -105,6 +107,9 @@ nnoremap sn gt
 nnoremap sp gT
 " コメントアウト
 nnoremap <Space><Space> :TComment<CR>
+" ノーマルモード時だけ ; と : を入れ替える
+nnoremap ; :
+nnoremap : ;
 
 " vim上でpythonファイル実行
 autocmd BufNewFile,BufRead *.py nnoremap <C-i> :!python %
@@ -135,7 +140,7 @@ set lazyredraw
 set cursorline
 set clipboard=unnamed,autoselect
 syntax on
-colorscheme allomancer
+colorscheme despacio
 
 """"""""""""""""""""""""""""""""""
 " 手を離した時だけcursorline有効
