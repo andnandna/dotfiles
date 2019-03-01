@@ -71,6 +71,10 @@ Plug 'phanviet/Sidonia'
 Plug 'Nequo/vim-allomancer'
 Plug 'nightsense/cosmic_latte'
 Plug 'bellma101/vim-snazzy'
+Plug 'slugbyte/yuejiu'
+Plug 'DankNeon/vim'
+Plug 'beikome/cosme.vim'
+Plug 'maksimr/Lucius2'
 
 call plug#end()
 
@@ -140,7 +144,7 @@ set lazyredraw
 set cursorline
 set clipboard=unnamed,autoselect
 syntax on
-colorscheme despacio
+colorscheme cosme
 
 """"""""""""""""""""""""""""""""""
 " 手を離した時だけcursorline有効
