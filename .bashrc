@@ -55,8 +55,20 @@ esac
 
 # エイリアス
 # 会社docker環境
-alias debitstar='docker exec -it bitstar_web_1 /bin/bash'
+alias deb='docker exec -it bitstar_web_1 /bin/bash'
 # 実践vim用、サンプルコードフォルダ直下でのみ
 alias rawvim='vim -u essential.vim'
 # 会社localPC Elastic起動
 alias startes='/usr/local/Cellar/elasticsearch/6.4.3/bin/elasticsearch'
+# Git系
+alias ga='git add'
+alias gcm='git commit'
+alias gco='git checkout'
+alias gd='git diff'
+alias gs='git status'
+alias gf='git fetch'
+alias gpl='git pull'
+alias gps='git push'
+alias gb='git blame'
+# コマンド系
+alias gr='grep -r'
