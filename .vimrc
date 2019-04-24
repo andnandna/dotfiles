@@ -25,9 +25,6 @@ Plug 'tpope/vim-rails'
 " Rubyのローカル変数をハイライトする
 Plug 'todesking/ruby_hl_lvar.vim'
 
-" vim上でGitコマンドを使用できる
-Plug 'tpope/vim-fugitive'
-
 " ウィンドウの分割サイズを調整"
 Plug 'simeji/winresizer'
 
@@ -59,22 +56,12 @@ Plug 'andymass/vim-matchup'
 
 " vimカラースキーム
 Plug 'cocopon/iceberg.vim'
-Plug 'davidklsn/vim-sialoquent'
-Plug 'AlessandroYorba/Despacio'
-Plug 'deathlyfrantic/vim-distill'
-Plug 'scwood/vim-hybrid'
 Plug 'atelierbram/vim-colors_duotones'
-Plug 'gilgigilgil/anderson.vim'
 Plug 'tjammer/blayu.vim'
-Plug 'nightsense/snow'
-Plug 'phanviet/Sidonia'
 Plug 'Nequo/vim-allomancer'
-Plug 'nightsense/cosmic_latte'
-Plug 'bellma101/vim-snazzy'
-Plug 'slugbyte/yuejiu'
-Plug 'DankNeon/vim'
 Plug 'beikome/cosme.vim'
 Plug 'maksimr/Lucius2'
+Plug 'caksoylar/vim-mysticaltutor'
 
 call plug#end()
 
@@ -111,6 +98,7 @@ nnoremap sn gt
 nnoremap sp gT
 " コメントアウト
 nnoremap <Space><Space> :TComment<CR>
+vnoremap <Space><Space> :TComment<CR>
 " ノーマルモード時だけ ; と : を入れ替える
 nnoremap ; :
 nnoremap : ;
@@ -138,24 +126,16 @@ set wildmode=list:longest,full
 set noswapfile
 set background=dark
 set incsearch
-set termguicolors
 set ttyfast
 set lazyredraw
-set cursorline
+set nocursorline
+set norelativenumber
 set clipboard=unnamed,autoselect
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 syntax on
-colorscheme cosme
-
-""""""""""""""""""""""""""""""""""
-" 手を離した時だけcursorline有効
-""""""""""""""""""""""""""""""""""
-" augroup vimrc-auto-cursorline
-"   autocmd!
-"   autocmd CursorMoved,CursorMovedI,WinLeave * setlocal nocursorline
-"   autocmd CursorHold,CursorHoldI * setlocal cursorline
-" augroup END
-
-" http://blog.remora.cx/2010/12/vim-ref-with-unite.html
+colorscheme mysticaltutor
 
 """"""""""""""""""""""""""""""
 " Unite.vim設定
