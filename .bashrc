@@ -60,3 +60,4 @@ alias debitstar='docker exec -it bitstar_web_1 /bin/bash'
 alias rawvim='vim -u essential.vim'
 # 会社localPC Elastic起動
 alias startes='/usr/local/Cellar/elasticsearch/6.4.3/bin/elasticsearch'
+source ~/.git-completion.bash
