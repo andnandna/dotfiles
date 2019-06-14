@@ -25,6 +25,7 @@ Plug 'tpope/vim-rails'
 " Rubyのローカル変数をハイライトする
 Plug 'todesking/ruby_hl_lvar.vim'
 
+"""" その他
 " ウィンドウの分割サイズを調整"
 Plug 'simeji/winresizer'
 
@@ -46,13 +47,16 @@ Plug 'slim-template/vim-slim'
 " Lineに詳細情報表示とテーマ
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme = 'raven'
+let g:airline_theme = 'deus'
 
 " jとkの移動を高速化
 Plug 'rhysd/accelerated-jk'
 
 " カッコ対応付け拡張
 Plug 'andymass/vim-matchup'
+
+" vim上でgitを使う
+Plug 'tpope/vim-fugitive'
 
 " vimカラースキーム
 Plug 'cocopon/iceberg.vim'
@@ -131,11 +135,12 @@ set lazyredraw
 set nocursorline
 set norelativenumber
 set clipboard=unnamed,autoselect
+set encoding=UTF-8
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 syntax on
-colorscheme mysticaltutor
+colorscheme allomancer
 
 """"""""""""""""""""""""""""""
 " Unite.vim設定
