@@ -66,6 +66,7 @@ Plug 'Nequo/vim-allomancer'
 Plug 'beikome/cosme.vim'
 Plug 'maksimr/Lucius2'
 Plug 'caksoylar/vim-mysticaltutor'
+Plug 'Marzipanzerfaust/vim-colors-jlc'
 
 call plug#end()
 
