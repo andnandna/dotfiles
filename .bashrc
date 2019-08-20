@@ -72,3 +72,5 @@ alias gps='git push'
 alias gb='git blame'
 # コマンド系
 alias gr='grep -r'
+# その他
+alias bim='echo "Not bim but vim." | cowsay -f milk'
