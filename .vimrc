@@ -23,7 +23,7 @@ Plug 'tpope/vim-endwise'
 " Rails開発用
 Plug 'tpope/vim-rails'
 " Rubyのローカル変数をハイライトする
-Plug 'todesking/ruby_hl_lvar.vim'
+" Plug 'todesking/ruby_hl_lvar.vim'
 
 """" その他
 " ウィンドウの分割サイズを調整"
