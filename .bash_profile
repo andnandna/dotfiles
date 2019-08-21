@@ -1,10 +1,5 @@
 # .bash_profile
 
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
-fi
-
 # User specific environment and startup programs
 # added by Anaconda3 5.3.0 installer
 # >>> conda init >>>
@@ -38,3 +33,8 @@ else
 fi
 unset __conda_setup
 # <<< conda init <<<
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
