@@ -58,6 +58,9 @@ Plug 'andymass/vim-matchup'
 " vim上でgitを使う
 Plug 'tpope/vim-fugitive'
 
+" vueシンタックスハイライト
+Plug 'posva/vim-vue'
+
 " vimカラースキーム
 Plug 'cocopon/iceberg.vim'
 Plug 'atelierbram/vim-colors_duotones'
@@ -139,6 +142,7 @@ set clipboard=unnamed,autoselect
 set encoding=UTF-8
 set termguicolors
 set hlsearch
+set backspace=indent,eol,start
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 syntax on
