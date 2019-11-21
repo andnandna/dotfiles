@@ -62,14 +62,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'posva/vim-vue'
 
 " vimカラースキーム
-Plug 'cocopon/iceberg.vim'
 Plug 'atelierbram/vim-colors_duotones'
 Plug 'tjammer/blayu.vim'
-Plug 'Nequo/vim-allomancer'
 Plug 'beikome/cosme.vim'
 Plug 'maksimr/Lucius2'
 Plug 'caksoylar/vim-mysticaltutor'
-Plug 'Marzipanzerfaust/vim-colors-jlc'
+Plug 'relastle/bluewery.vim'
+Plug 'Resonious/vim-camo'
+Plug 'arzg/vim-corvine'
+Plug 'flrnprz/candid.vim'
 
 call plug#end()
 
@@ -146,7 +147,7 @@ set backspace=indent,eol,start
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 syntax on
-colorscheme lucius
+colorscheme bluewery
 
 """"""""""""""""""""""""""""""
 " Unite.vim設定
