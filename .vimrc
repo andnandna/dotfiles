@@ -20,10 +20,15 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 """" Ruby / Rails
 " Ruby向けにendを自動挿入してくれる
 Plug 'tpope/vim-endwise'
-" Rails開発用
-Plug 'tpope/vim-rails'
 " Rubyのローカル変数をハイライトする
 " Plug 'todesking/ruby_hl_lvar.vim'
+
+"""" シンタックスハイライト
+Plug 'slim-template/vim-slim'
+Plug 'posva/vim-vue'
+Plug 'vim-ruby/vim-ruby'
+Plug 'vim-python/python-syntax'
+Plug 'pangloss/vim-javascript'
 
 """" その他
 " ウィンドウの分割サイズを調整"
@@ -41,13 +46,10 @@ Plug 'nathanaelkane/vim-indent-guides'
 " 行末の半角スペースを可視化
 Plug 'bronson/vim-trailing-whitespace'
 
-" Slimのシンタックスハイライト
-Plug 'slim-template/vim-slim'
-
 " Lineに詳細情報表示とテーマ
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme = 'deus'
+let g:airline_theme = 'gruvbox_material'
 
 " jとkの移動を高速化
 Plug 'rhysd/accelerated-jk'
@@ -58,18 +60,18 @@ Plug 'andymass/vim-matchup'
 " vim上でgitを使う
 Plug 'tpope/vim-fugitive'
 
-" vueシンタックスハイライト
-Plug 'posva/vim-vue'
-
-" vimカラースキーム
-Plug 'cocopon/iceberg.vim'
+"""" カラースキーム
 Plug 'atelierbram/vim-colors_duotones'
 Plug 'tjammer/blayu.vim'
-Plug 'Nequo/vim-allomancer'
 Plug 'beikome/cosme.vim'
 Plug 'maksimr/Lucius2'
 Plug 'caksoylar/vim-mysticaltutor'
-Plug 'Marzipanzerfaust/vim-colors-jlc'
+Plug 'relastle/bluewery.vim'
+Plug 'Resonious/vim-camo'
+Plug 'arzg/vim-corvine'
+Plug 'flrnprz/candid.vim'
+Plug 'sainnhe/gruvbox-material'
+let g:gruvbox_material_background = 'medium'
 
 call plug#end()
 
@@ -146,7 +148,7 @@ set backspace=indent,eol,start
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 syntax on
-colorscheme cosme
+colorscheme gruvbox-material
 
 """"""""""""""""""""""""""""""
 " Unite.vim設定
