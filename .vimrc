@@ -21,7 +21,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Ruby向けにendを自動挿入してくれる
 Plug 'tpope/vim-endwise'
 " Rubyのローカル変数をハイライトする
-" Plug 'todesking/ruby_hl_lvar.vim'
+Plug 'todesking/ruby_hl_lvar.vim'
 
 """" シンタックスハイライト
 Plug 'slim-template/vim-slim'
@@ -62,15 +62,11 @@ Plug 'tpope/vim-fugitive'
 
 """" カラースキーム
 Plug 'atelierbram/vim-colors_duotones'
-Plug 'tjammer/blayu.vim'
 Plug 'beikome/cosme.vim'
 Plug 'maksimr/Lucius2'
 Plug 'caksoylar/vim-mysticaltutor'
-Plug 'relastle/bluewery.vim'
-Plug 'Resonious/vim-camo'
-Plug 'arzg/vim-corvine'
-Plug 'flrnprz/candid.vim'
 Plug 'sainnhe/gruvbox-material'
+Plug 'yuqio/vim-darkspace'
 let g:gruvbox_material_background = 'medium'
 
 call plug#end()
@@ -148,7 +144,7 @@ set backspace=indent,eol,start
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 syntax on
-colorscheme gruvbox-material
+colorscheme lucius
 
 """"""""""""""""""""""""""""""
 " Unite.vim設定
