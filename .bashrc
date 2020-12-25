@@ -72,5 +72,8 @@ alias gps='git push'
 alias gb='git blame'
 # コマンド系
 alias gr='grep -r'
+alias grexlog='grep -r --exclude-dir=log'
 # その他
 alias bim='echo "Not bim but vim." | cowsay -f milk'
+#nodebrewのpath
+export PATH=$HOME/.nodebrew/current/bin:$PATH

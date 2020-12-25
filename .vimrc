@@ -21,7 +21,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Ruby向けにendを自動挿入してくれる
 Plug 'tpope/vim-endwise'
 " Rubyのローカル変数をハイライトする
-Plug 'todesking/ruby_hl_lvar.vim'
+" Plug 'todesking/ruby_hl_lvar.vim'
 
 """" シンタックスハイライト
 Plug 'slim-template/vim-slim'
