@@ -1,1 +1,3 @@
-/Users/bitstar/.zprezto/runcoms/zshrc
+eval "$(nodenv init -)"
+export CLICOLOR=1
+export TERM=xterm-256color
