@@ -1,1 +1,1 @@
-/Users/bitstar/dotfiles/.vim
+/Users/andoh/dotfiles/.vim
