@@ -133,4 +133,23 @@ function find_cd() {
 zle -N find_cd
 bindkey '^X' find_cd
 
-eval "$(anyenv init -)"
+eval "$(nodenv init -)"
+export CLICOLOR=1
+export TERM=xterm-256color
+
+# エイリアス
+alias gs='git status'
+alias gd='git diff'
+alias gpl='git pull origin'
+alias gck='git checkout'
+alias gck-b='git checkout -b'
+alias gst='git stash -u'
+alias ga='git add'
+alias gcm-m='git commit -m'
+alias gps='git push origin'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ando.yuta/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ando.yuta/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ando.yuta/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ando.yuta/google-cloud-sdk/completion.zsh.inc'; fi
