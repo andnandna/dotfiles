@@ -148,8 +148,5 @@ alias ga='git add'
 alias gcm-m='git commit -m'
 alias gps='git push origin'
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ando.yuta/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ando.yuta/google-cloud-sdk/path.zsh.inc'; fi
+eval "$(nodenv init -)"
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/ando.yuta/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ando.yuta/google-cloud-sdk/completion.zsh.inc'; fi
