@@ -150,3 +150,7 @@ alias gps='git push origin'
 
 eval "$(nodenv init -)"
 
+export PATH="$PATH:/Users/andoh/development/flutter/bin"
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
